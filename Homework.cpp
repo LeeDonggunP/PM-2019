@@ -30,9 +30,27 @@ X가 주어졌을 때, X번째 분수를 구하는 프로그램을 작성하시�
 
 int main(void) {
 	string student_id;
-	student_id = "2018-12345";
+	student_id = "2018-14774";
 	cout << student_id << endl;
 	// 자신의 학번을 출력합니다.
+
+	int x;
+	cout << "X 입력 : ";
+	cin >> x;
+
+	int i = 1;  //몇번째 대각선인가
+	int sum = 0;
+	while (sum + i < x) {
+		sum += i;
+		i++;
+	}
+
+	if ((i % 2) == 1) {
+		cout << i + 1 - (x - sum) << "/" << (x - sum) << endl;
+	}
+	else
+		cout << (x - sum) << "/" << i + 1 - (x - sum) << endl;
+
 
 	//TO DO
 
